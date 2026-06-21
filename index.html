@@ -1,181 +1,562 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Al Passo – Menú</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Italianno&family=Tangerine:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al Passo – Menú</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=Italianno&family=Tangerine:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<div class="hero">
-  <div class="hero-inner">
-    <p class="hero-eyebrow">Colegiales · Fútbol · Pasión</p>
-    <h1 class="hero-title">AL <span style="color:#fff">PASSO</span></h1>
-    <p class="hero-sub">Menú</p>
-    <p class="hero-tagline">"La pelota no se mancha" — D10S</p>
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Colegiales · Fútbol · Pasión</p>
+      <h1 class="hero-title">AL <span style="color:#fff">PASSO</span></h1>
+      <p class="hero-sub">Menú</p>
+      <p class="hero-tagline">"La pelota no se mancha" — D10S</p>
+    </div>
   </div>
-</div>
 
-<div class="nav-wrapper">
-  <div class="nav-tabs" id="navTabs">
-    <button class="tab-btn active" onclick="show('cafe',this)">☕ Café</button>
-    <button class="tab-btn" onclick="show('desayunos',this)">🥐 Desayunos</button>
-    <button class="tab-btn" onclick="show('combos',this)">🏆 Combos</button>
-    <button class="tab-btn" onclick="show('sanguches',this)">🥪 Sánguches</button>
-    <button class="tab-btn" onclick="show('ensaladas',this)">🥗 Ensaladas</button>
-    <button class="tab-btn" onclick="show('bebidas',this)">🍺 Bebidas</button>
-    <button class="tab-btn" onclick="show('extras',this)">⚡ Extras</button>
+  <div class="nav-wrapper">
+    <div class="nav-tabs" id="navTabs">
+      <button class="tab-btn active" onclick="show('cafe',this)">☕ Café</button>
+      <button class="tab-btn" onclick="show('desayunos',this)">🥐 Desayunos</button>
+      <button class="tab-btn" onclick="show('combos',this)">🏆 Combos</button>
+      <button class="tab-btn" onclick="show('sanguches',this)">🥪 Sánguches</button>
+      <button class="tab-btn" onclick="show('ensaladas',this)">🥗 Ensaladas</button>
+      <button class="tab-btn" onclick="show('bebidas',this)">🍺 Bebidas</button>
+      <button class="tab-btn" onclick="show('extras',this)">⚡ Extras</button>
+    </div>
+    <span class="scroll-hint" id="scrollHint">›</span>
   </div>
-  <span class="scroll-hint" id="scrollHint">›</span>
-</div>
 
-<!-- CAFÉ -->
-<div id="cafe" class="section active">
-  <div class="section-header"><h2>Cafetería</h2><p>Para arrancar el partido con todo</p></div>
-  <div class="item"><div class="item-body"><div class="item-name">CAFÉ EXPRESSO</div><div class="item-desc">Espresso solo, bien concentrado</div></div><div class="item-price">$2.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">CAFÉ CON LECHE</div><div class="item-desc">Espresso con leche vaporizada</div></div><div class="item-price">$3.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">CAPUCHINNO</div><div class="item-desc">Espresso con leche vaporizada y abundante espuma</div></div><div class="item-price">$3.900</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">TÉ EN HEBRAS</div><div class="item-desc">Selección de hebras, servido en tetera</div></div><div class="item-price">$1.800</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">MATE COCIDO</div><div class="item-desc">Como en casa, bien cebado · con leche o sin</div></div><div class="item-price">$1.800</div></div>
-</div>
-
-<!-- DESAYUNOS -->
-<div id="desayunos" class="section">
-  <div class="section-header"><h2>Desayunos & Meriendas</h2><p>Genio del Fútbol · Clásicos con historia</p></div>
-
-  <div class="sub-label">Dulces</div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La clásica</div><div class="item-name">MEDIALUNA DE MANTECA</div></div><div class="item-price">$1.700</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El dulce del campeón</div><div class="item-name">ROLL DE CANELA</div><div class="item-desc">Roll artesanal con glasé de canela</div></div><div class="item-price">$5.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La formación</div><div class="item-name">CROISSANT ARTESANAL</div><div class="item-desc">Masa hojaldrada, mantecoso y crocante</div></div><div class="item-price">$3.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El gol de oro</div><div class="item-name">CROISSANT CON DULCE DE LECHE</div><div class="item-desc">Croissant artesanal relleno de DDL</div></div><div class="item-price">$5.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La mano de D10S</div><div class="item-name">CHIPA CASERO</div><div class="item-desc">Chipa de almidón, recién horneado</div></div><div class="item-price">$2.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">Barrilete Cósmico</div><div class="item-name">SCON DE QUESO</div><div class="item-desc">Scon artesanal con queso</div></div><div class="item-price">$4.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El gol del siglo</div><div class="item-name">SCON CON JAMÓN Y QUESO</div><div class="item-desc">Scon artesanal, jamón y queso</div><div class="item-opt">Opcional: sin jamón, con tomate</div></div><div class="item-price">$7.500</div></div>
-
-  <div class="sub-label">Salados · Nivel Selección</div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La del 5</div><div class="item-name">HUEVOS REVUELTOS</div><div class="item-desc">Huevos revueltos, palta fresca, tomates cherry, dip de queso crema y tostadas mixtas</div></div><div class="item-price">$10.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El despliegue</div><div class="item-name">OMELETTE CLÁSICO</div><div class="item-desc">Huevos, jamón, queso, tomate y orégano</div></div><div class="item-price">$8.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El cambio táctico</div><div class="item-name">MEDIALUNA RELLENA</div><div class="item-desc">Jamón y queso</div><div class="item-opt">Opcional: sin jamón, con tomate</div></div><div class="item-price">$4.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El 9 del equipo</div><div class="item-name">CROISSANT RELLENO</div><div class="item-desc">Jamón y queso</div><div class="item-opt">Opcional: sin jamón, con tomate</div></div><div class="item-price">$7.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">A lo Messi</div><div class="item-name">CROISSANT DE CRUDO</div><div class="item-desc">Jamón crudo, queso dambo y parmesano fundido</div></div><div class="item-price">$9.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La del Capitán</div><div class="item-name">CROISSANT AVOCADO</div><div class="item-desc">Palta cremosa, huevo y tomate</div></div><div class="item-price">$9.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La del 10</div><div class="item-name">CROISSANT FRESCO</div><div class="item-desc">Jamón crudo seleccionado, dambo y rúcula fresca</div></div><div class="item-price">$9.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La Albiceleste</div><div class="item-name">TOSTÓN DE PALTA</div><div class="item-desc">Pan de campo, queso crema, palta, brotes, cherrys y semillas</div></div><div class="item-price">$9.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El campeón</div><div class="item-name">TOSTÓN DE POLLO</div><div class="item-desc">Pan de campo, pollo grillado o milanesa, dambo, hongos, verdeo y mostaza con miel</div></div><div class="item-price">$10.500</div></div>
-
-  <div class="sub-label">French Toast · La de Dios (Diego)</div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La gambeta</div><div class="item-name">FRENCH TOAST DULCE</div><div class="item-desc">Tostadas con miel, azúcar impalpable, frutas frescas y dip a elección: queso crema, mermelada o DDL</div></div><div class="item-price">$10.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El potrero</div><div class="item-name">FRENCH TOAST SALADO</div><div class="item-desc">Tostadas con miel, huevos revueltos y panceta bien crocante</div></div><div class="item-price">$11.000</div></div>
-</div>
-
-<!-- COMBOS -->
-<div id="combos" class="section">
-  <div class="section-header"><h2>Combos La Scaloneta</h2><p>Para empezar el día como un campeón del mundo</p></div>
-
-  <div class="combo-card">
-    <div class="combo-nickname">El del arranque</div>
-    <div class="combo-name">COMBO MEDIALUNAS</div>
-    <div class="combo-desc">Café a elección + 2 medialunas de manteca</div>
-    <div class="combo-footer"><span>el clásico de siempre</span><div class="combo-price">$6.000</div></div>
+  <!-- CAFÉ -->
+  <div id="cafe" class="section active">
+    <div class="section-header">
+      <h2>Cafetería</h2>
+      <p>Para arrancar el partido con todo</p>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">CAFÉ EXPRESSO</div>
+        <div class="item-desc">Espresso solo, bien concentrado</div>
+      </div>
+      <div class="item-price">$2.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">CAFÉ CON LECHE</div>
+        <div class="item-desc">Espresso con leche vaporizada</div>
+      </div>
+      <div class="item-price">$3.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">CAPUCHINNO</div>
+        <div class="item-desc">Espresso con leche vaporizada y abundante espuma</div>
+      </div>
+      <div class="item-price">$3.900</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">TÉ EN HEBRAS</div>
+        <div class="item-desc">Selección de hebras, servido en tetera</div>
+      </div>
+      <div class="item-price">$1.800</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">MATE COCIDO</div>
+        <div class="item-desc">Como en casa, bien cebado · con leche o sin</div>
+      </div>
+      <div class="item-price">$1.800</div>
+    </div>
   </div>
-  <div class="combo-card">
-    <div class="combo-nickname">El atajadón</div>
-    <div class="combo-name">COMBO TOCINO</div>
-    <div class="combo-desc">Café a elección, huevos revueltos, panceta crocante y 1 tostada</div>
-    <div class="combo-footer"><span>el más completo</span><div class="combo-price">$12.000</div></div>
+
+  <!-- DESAYUNOS -->
+  <div id="desayunos" class="section">
+    <div class="section-header">
+      <h2>Desayunos & Meriendas</h2>
+      <p>Genio del Fútbol · Clásicos con historia</p>
+    </div>
+
+    <div class="sub-label">Dulces</div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La clásica</div>
+        <div class="item-name">MEDIALUNA DE MANTECA</div>
+      </div>
+      <div class="item-price">$1.700</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El dulce del campeón</div>
+        <div class="item-name">ROLL DE CANELA</div>
+        <div class="item-desc">Roll artesanal con glasé de canela</div>
+      </div>
+      <div class="item-price">$5.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La formación</div>
+        <div class="item-name">CROISSANT ARTESANAL</div>
+        <div class="item-desc">Masa hojaldrada, mantecoso y crocante</div>
+      </div>
+      <div class="item-price">$3.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El gol de oro</div>
+        <div class="item-name">CROISSANT CON DULCE DE LECHE</div>
+        <div class="item-desc">Croissant artesanal relleno de DDL</div>
+      </div>
+      <div class="item-price">$5.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La mano de D10S</div>
+        <div class="item-name">CHIPA CASERO</div>
+        <div class="item-desc">Chipa de almidón, recién horneado</div>
+      </div>
+      <div class="item-price">$2.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">Barrilete Cósmico</div>
+        <div class="item-name">SCON DE QUESO</div>
+        <div class="item-desc">Scon artesanal con queso</div>
+      </div>
+      <div class="item-price">$4.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El gol del siglo</div>
+        <div class="item-name">SCON CON JAMÓN Y QUESO</div>
+        <div class="item-desc">Scon artesanal, jamón y queso</div>
+        <div class="item-opt">Opcional: sin jamón, con tomate</div>
+      </div>
+      <div class="item-price">$7.500</div>
+    </div>
+
+    <div class="sub-label">Salados · Nivel Selección</div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La del 5</div>
+        <div class="item-name">HUEVOS REVUELTOS</div>
+        <div class="item-desc">Huevos revueltos, palta fresca, tomates cherry, dip de queso crema y tostadas mixtas
+        </div>
+      </div>
+      <div class="item-price">$10.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El despliegue</div>
+        <div class="item-name">OMELETTE CLÁSICO</div>
+        <div class="item-desc">Huevos, jamón, queso, tomate y orégano</div>
+      </div>
+      <div class="item-price">$8.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El cambio táctico</div>
+        <div class="item-name">MEDIALUNA RELLENA</div>
+        <div class="item-desc">Jamón y queso</div>
+        <div class="item-opt">Opcional: sin jamón, con tomate</div>
+      </div>
+      <div class="item-price">$4.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El 9 del equipo</div>
+        <div class="item-name">CROISSANT RELLENO</div>
+        <div class="item-desc">Jamón y queso</div>
+        <div class="item-opt">Opcional: sin jamón, con tomate</div>
+      </div>
+      <div class="item-price">$7.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">A lo Messi</div>
+        <div class="item-name">CROISSANT DE CRUDO</div>
+        <div class="item-desc">Jamón crudo, queso dambo y parmesano fundido</div>
+      </div>
+      <div class="item-price">$9.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La del Capitán</div>
+        <div class="item-name">CROISSANT AVOCADO</div>
+        <div class="item-desc">Palta cremosa, huevo y tomate</div>
+      </div>
+      <div class="item-price">$9.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La del 10</div>
+        <div class="item-name">CROISSANT FRESCO</div>
+        <div class="item-desc">Jamón crudo seleccionado, dambo y rúcula fresca</div>
+      </div>
+      <div class="item-price">$9.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La Albiceleste</div>
+        <div class="item-name">TOSTÓN DE PALTA</div>
+        <div class="item-desc">Pan de campo, queso crema, palta, brotes, cherrys y semillas</div>
+      </div>
+      <div class="item-price">$9.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El campeón</div>
+        <div class="item-name">TOSTÓN DE POLLO</div>
+        <div class="item-desc">Pan de campo, pollo grillado o milanesa, dambo, hongos, verdeo y mostaza con miel</div>
+      </div>
+      <div class="item-price">$10.500</div>
+    </div>
+
+    <div class="sub-label">French Toast · La de Dios (Diego)</div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La gambeta</div>
+        <div class="item-name">FRENCH TOAST DULCE</div>
+        <div class="item-desc">Tostadas con miel, azúcar impalpable, frutas frescas y dip a elección: queso crema,
+          mermelada o DDL</div>
+      </div>
+      <div class="item-price">$10.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El potrero</div>
+        <div class="item-name">FRENCH TOAST SALADO</div>
+        <div class="item-desc">Tostadas con miel, huevos revueltos y panceta bien crocante</div>
+      </div>
+      <div class="item-price">$11.000</div>
+    </div>
   </div>
-  <div class="combo-card">
-    <div class="combo-nickname">El de siempre</div>
-    <div class="combo-name">COMBO TRADICIONAL</div>
-    <div class="combo-desc">Café a elección, 2 tostadas integrales, 1 tostada blanca y 2 dips a elección: queso crema, mermelada o DDL</div>
-    <div class="combo-footer"><span>el favorito del plantel</span><div class="combo-price">$10.000</div></div>
+
+  <!-- COMBOS -->
+  <div id="combos" class="section">
+    <div class="section-header">
+      <h2>Combos La Scaloneta</h2>
+      <p>Para empezar el día como un campeón del mundo</p>
+    </div>
+
+    <div class="combo-card">
+      <div class="combo-nickname">El del arranque</div>
+      <div class="combo-name">COMBO MEDIALUNAS</div>
+      <div class="combo-desc">Café a elección + 2 medialunas de manteca</div>
+      <div class="combo-footer"><span>el clásico de siempre</span>
+        <div class="combo-price">$6.000</div>
+      </div>
+    </div>
+    <div class="combo-card">
+      <div class="combo-nickname">El atajadón</div>
+      <div class="combo-name">COMBO TOCINO</div>
+      <div class="combo-desc">Café a elección, huevos revueltos, panceta crocante y 1 tostada</div>
+      <div class="combo-footer"><span>el más completo</span>
+        <div class="combo-price">$12.000</div>
+      </div>
+    </div>
+    <div class="combo-card">
+      <div class="combo-nickname">El de siempre</div>
+      <div class="combo-name">COMBO TRADICIONAL</div>
+      <div class="combo-desc">Café a elección, 2 tostadas integrales, 1 tostada blanca y 2 dips a elección: queso crema,
+        mermelada o DDL</div>
+      <div class="combo-footer"><span>el favorito del plantel</span>
+        <div class="combo-price">$10.000</div>
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- SÁNGUCHES -->
-<div id="sanguches" class="section">
-  <div class="section-header"><h2>Sánguches</h2><p>El 10 de la Selección · Pan casero recién horneado</p></div>
+  <!-- SÁNGUCHES -->
+  <div id="sanguches" class="section">
+    <div class="section-header">
+      <h2>Sánguches</h2>
+      <p>El 10 de la Selección · Pan casero recién horneado</p>
+    </div>
 
-  <div class="item"><div class="item-body"><div class="item-nickname">El Capitán</div><div class="item-name">TOSTADO DE LA CASA</div><div class="item-desc">Jamón, dambo, gruyere y parmesano gratinado</div><div class="item-opt">Opcional: sin jamón, con tomate</div></div><div class="item-price">$9.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El Triunfo</div><div class="item-name">BAGEL DE PANCETA</div><div class="item-desc">Cheddar, panceta y medallón de huevo</div></div><div class="item-price">$10.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">Balón de Oro</div><div class="item-name">BAGEL COMPLETO</div><div class="item-desc">Palta, jamón, queso, huevo, tomate, rúcula y mayonesa</div></div><div class="item-price">$11.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La muralla</div><div class="item-name">BAGEL CAESAR</div><div class="item-desc">Pollo, lechuga, panceta y salsa Caesar</div></div><div class="item-price">$9.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El Pase Filtrado</div><div class="item-name">SÁNGUCHE DE CRUDO</div><div class="item-desc">Tomates en oliva, jamón crudo, parmesano y rúcula</div></div><div class="item-price">$15.000</div></div>
-  <div class="item"><div class="item-body"><span class="badge badge-veggie">Veggie</span><div class="item-nickname">La Joya</div><div class="item-name">SÁNGUCHE VEGGIE</div><div class="item-desc">Palta, dambo, tomate y pesto artesanal</div></div><div class="item-price">$11.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El Gol de Todos</div><div class="item-name">SÁNGUCHE DE MILANESA</div><div class="item-desc">Milanesa de pollo o grill, jamón, dambo, lechuga y tomate</div></div><div class="item-price">$15.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La Pulga</div><div class="item-name">SÁNGUCHE DE POLLO Y AZUL</div><div class="item-desc">Pollo o milanesa, cebolla caramelizada, hongos y crema de Roquefort</div></div><div class="item-price">$15.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La gambeta</div><div class="item-name">SÁNGUCHE DE POLLO Y PESTO</div><div class="item-desc">Pan casero, pollo o milanesa, dambo, pesto, rúcula y tomate</div></div><div class="item-price">$15.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La Tercera</div><div class="item-name">CAMPEÓN DEL MUNDO</div><div class="item-desc">Milanesa de pollo, jamón, cheddar, cebolla morada y panceta</div></div><div class="item-price">$15.000</div></div>
-</div>
-
-<!-- ENSALADAS -->
-<div id="ensaladas" class="section">
-  <div class="section-header"><h2>Ensaladas</h2><p>Equipo Ganador</p></div>
-  <div class="ensalada-price">Todas · $12.000</div>
-  <div class="item"><div class="item-body"><div class="item-nickname">El Fideo</div><div class="item-name">PASTA</div><div class="item-desc">Rúcula, fideos, pollo, pesto y tomates cherry</div></div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La del Dibu</div><div class="item-name">CAESAR</div><div class="item-desc">Lechuga crocante, pollo, panceta, parmesano, crutones y salsa Caesar</div></div></div>
-  <div class="item"><div class="item-body"><div class="item-nickname">La Scaloni</div><div class="item-name">MILA SALAD</div><div class="item-desc">Lechuga, cherrys, pickles, choclo, milanesa de pollo casera y reducción de miel y mostaza</div></div></div>
-</div>
-
-<!-- BEBIDAS -->
-<div id="bebidas" class="section">
-  <div class="section-header"><h2>Bebidas</h2><p>Frías como el arco rival</p></div>
-
-  <div class="sub-label">Sin alcohol</div>
-  <div class="item"><div class="item-body"><div class="item-name">AGUA MINERAL</div><div class="item-desc">Sin gas o con gas</div></div><div class="item-price">$3.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">GASEOSA</div><div class="item-desc">Coca-Cola, Sprite o Fanta</div></div><div class="item-price">$3.500</div></div>
-
-  <div class="sub-label">Con alcohol</div>
-  <div class="item"><div class="item-body"><div class="item-name">HEINEKEN</div><div class="item-desc">Lager holandesa · 330cc</div></div><div class="item-price">$4.800</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">ANDES ROJA</div><div class="item-desc">Lager con un toque de amargo</div></div><div class="item-price">$4.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">IMPERIAL</div><div class="item-desc">Lager argentina clásica</div></div><div class="item-price">$4.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">MILLER</div><div class="item-desc">Lager suave y refrescante</div></div><div class="item-price">$4.500</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">IMPERIAL IPA</div><div class="item-desc">India Pale Ale, lupulada y aromática</div></div><div class="item-price">$4.800</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">COPA DE VINO</div><div class="item-desc">Tinto o blanco a elección</div></div><div class="item-price">$4.000</div></div>
-
-  <div class="sub-label">Fernet</div>
-  <div class="item"><div class="item-body"><div class="item-name">FERNET</div><div class="item-desc">Porrón 500ml · servido con hielo y cola</div></div><div class="item-price">$5.000</div></div>
-  <div class="item"><div class="item-body"><div class="item-name">FERNET 1 LITRO</div><div class="item-desc">Para compartir en la mesa</div></div><div class="item-price">$9.500</div></div>
-</div>
-
-<!-- EXTRAS -->
-<div id="extras" class="section">
-  <div class="section-header"><h2>Extras</h2><p>Para completar la jugada</p></div>
-  <div class="extras-list">
-    <div class="item"><div class="item-body"><div class="item-name">FIAMBRE</div><div class="item-desc">Jamón, queso o panceta</div></div><div class="item-price">$3.000</div></div>
-    <div class="item"><div class="item-body"><div class="item-name">DIPS</div><div class="item-desc">Queso crema, mermelada o dulce de leche</div></div><div class="item-price">$1.800</div></div>
-    <div class="item"><div class="item-body"><div class="item-name">PANIFICADOS</div><div class="item-desc">Tostada blanca o integral</div></div><div class="item-price">$1.600</div></div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El Capitán</div>
+        <div class="item-name">TOSTADO DE LA CASA</div>
+        <div class="item-desc">Jamón, dambo, gruyere y parmesano gratinado</div>
+        <div class="item-opt">Opcional: sin jamón, con tomate</div>
+      </div>
+      <div class="item-price">$9.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El Triunfo</div>
+        <div class="item-name">BAGEL DE PANCETA</div>
+        <div class="item-desc">Cheddar, panceta y medallón de huevo</div>
+      </div>
+      <div class="item-price">$10.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">Balón de Oro</div>
+        <div class="item-name">BAGEL COMPLETO</div>
+        <div class="item-desc">Palta, jamón, queso, huevo, tomate, rúcula y mayonesa</div>
+      </div>
+      <div class="item-price">$11.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La muralla</div>
+        <div class="item-name">BAGEL CAESAR</div>
+        <div class="item-desc">Pollo, lechuga, panceta y salsa Caesar</div>
+      </div>
+      <div class="item-price">$9.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El Pase Filtrado</div>
+        <div class="item-name">SÁNGUCHE DE CRUDO</div>
+        <div class="item-desc">Tomates en oliva, jamón crudo, parmesano y rúcula</div>
+      </div>
+      <div class="item-price">$15.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body"><span class="badge badge-veggie">Veggie</span>
+        <div class="item-nickname">La Joya</div>
+        <div class="item-name">SÁNGUCHE VEGGIE</div>
+        <div class="item-desc">Palta, dambo, tomate y pesto artesanal</div>
+      </div>
+      <div class="item-price">$11.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El Gol de Todos</div>
+        <div class="item-name">SÁNGUCHE DE MILANESA</div>
+        <div class="item-desc">Milanesa de pollo o grill, jamón, dambo, lechuga y tomate</div>
+      </div>
+      <div class="item-price">$15.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La Pulga</div>
+        <div class="item-name">SÁNGUCHE DE POLLO Y AZUL</div>
+        <div class="item-desc">Pollo o milanesa, cebolla caramelizada, hongos y crema de Roquefort</div>
+      </div>
+      <div class="item-price">$15.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La gambeta</div>
+        <div class="item-name">SÁNGUCHE DE POLLO Y PESTO</div>
+        <div class="item-desc">Pan casero, pollo o milanesa, dambo, pesto, rúcula y tomate</div>
+      </div>
+      <div class="item-price">$15.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La Tercera</div>
+        <div class="item-name">CAMPEÓN DEL MUNDO</div>
+        <div class="item-desc">Milanesa de pollo o grill, jamón, cheddar, cebolla morada y panceta</div>
+      </div>
+      <div class="item-price">$15.000</div>
+    </div>
   </div>
-</div>
 
-<!-- Google Review Floating Button -->
-<a href="https://g.page/r/CduFhtPRjy2ZEBE/review" target="_blank" rel="noopener noreferrer" class="google-fab" aria-label="Dejar reseña en Google">
-  <span class="google-fab-tooltip hidden">¡Dejanos tu reseña! ⭐⭐⭐⭐⭐</span>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-    <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-    <path fill="#4285F4" d="M46.5 24c0-1.61-.15-3.16-.42-4.69H24v9h12.75c-.55 2.88-2.18 5.32-4.63 6.96l7.18 5.57C43.5 36.33 46.5 30.82 46.5 24z"/>
-    <path fill="#FBBC05" d="M10.54 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.98-6.19z"/>
-    <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.18-5.57c-2.11 1.41-4.8 2.25-8.71 2.25-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-  </svg>
-</a>
+  <!-- ENSALADAS -->
+  <div id="ensaladas" class="section">
+    <div class="section-header">
+      <h2>Ensaladas</h2>
+      <p>Equipo Ganador</p>
+    </div>
+    <div class="ensalada-price">Todas · $12.000</div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">El Fideo</div>
+        <div class="item-name">PASTA</div>
+        <div class="item-desc">Rúcula, fideos, pollo, pesto y tomates cherry</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La del Dibu</div>
+        <div class="item-name">CAESAR</div>
+        <div class="item-desc">Lechuga crocante, pollo, panceta, parmesano, crutones y salsa Caesar</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-nickname">La Scaloni</div>
+        <div class="item-name">MILA SALAD</div>
+        <div class="item-desc">Lechuga, cherrys, pickles, choclo, milanesa de pollo casera y reducción de miel y mostaza
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!-- Instagram Floating Button -->
-<a href="https://www.instagram.com/alpasso.colegiales" target="_blank" rel="noopener noreferrer" class="ig-fab" aria-label="Seguinos en Instagram">
-  <span class="ig-fab-tooltip hidden">¡Seguinos para novedades! 📸</span>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-</a>
+  <!-- BEBIDAS -->
+  <div id="bebidas" class="section">
+    <div class="section-header">
+      <h2>Bebidas</h2>
+      <p>Frías como el arco rival</p>
+    </div>
 
-<div class="footer">
-  <strong>AL PASSO</strong><br>
-  Colegiales · "Pasión que nos une"<br>
-  <a href="https://www.instagram.com/alpasso.colegiales" target="_blank" rel="noopener noreferrer" class="footer-ig">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><linearGradient id="ig-grad-footer" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#fdf497"/><stop offset="45%" style="stop-color:#fd5949"/><stop offset="60%" style="stop-color:#d6249f"/><stop offset="100%" style="stop-color:#285AEB"/></linearGradient></defs><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    @alpasso.colegiales
+    <div class="sub-label">Sin alcohol</div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">AGUA MINERAL</div>
+        <div class="item-desc">Sin gas o con gas</div>
+      </div>
+      <div class="item-price">$3.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">GASEOSA</div>
+        <div class="item-desc">Coca-Cola, Sprite o Fanta</div>
+      </div>
+      <div class="item-price">$3.500</div>
+    </div>
+
+    <div class="sub-label">Con alcohol</div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">HEINEKEN</div>
+        <div class="item-desc">Lager holandesa · 330cc</div>
+      </div>
+      <div class="item-price">$4.800</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">ANDES ROJA</div>
+        <div class="item-desc">Lager con un toque de amargo</div>
+      </div>
+      <div class="item-price">$4.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">IMPERIAL</div>
+        <div class="item-desc">Lager argentina clásica</div>
+      </div>
+      <div class="item-price">$4.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">MILLER</div>
+        <div class="item-desc">Lager suave y refrescante</div>
+      </div>
+      <div class="item-price">$4.500</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">IMPERIAL IPA</div>
+        <div class="item-desc">India Pale Ale, lupulada y aromática</div>
+      </div>
+      <div class="item-price">$4.800</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">COPA DE VINO</div>
+        <div class="item-desc">Tinto o blanco a elección</div>
+      </div>
+      <div class="item-price">$4.000</div>
+    </div>
+
+    <div class="sub-label">Fernet</div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">FERNET</div>
+        <div class="item-desc">Porrón 500ml · servido con hielo y cola</div>
+      </div>
+      <div class="item-price">$5.000</div>
+    </div>
+    <div class="item">
+      <div class="item-body">
+        <div class="item-name">FERNET 1 LITRO</div>
+        <div class="item-desc">Para compartir en la mesa</div>
+      </div>
+      <div class="item-price">$9.500</div>
+    </div>
+  </div>
+
+  <!-- EXTRAS -->
+  <div id="extras" class="section">
+    <div class="section-header">
+      <h2>Extras</h2>
+      <p>Para completar la jugada</p>
+    </div>
+    <div class="extras-list">
+      <div class="item">
+        <div class="item-body">
+          <div class="item-name">FIAMBRE</div>
+          <div class="item-desc">Jamón, queso o panceta</div>
+        </div>
+        <div class="item-price">$3.000</div>
+      </div>
+      <div class="item">
+        <div class="item-body">
+          <div class="item-name">DIPS</div>
+          <div class="item-desc">Queso crema, mermelada o dulce de leche</div>
+        </div>
+        <div class="item-price">$1.800</div>
+      </div>
+      <div class="item">
+        <div class="item-body">
+          <div class="item-name">PANIFICADOS</div>
+          <div class="item-desc">Tostada blanca o integral</div>
+        </div>
+        <div class="item-price">$1.600</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Review Floating Button -->
+  <a href="https://g.page/r/CduFhtPRjy2ZEBE/review" target="_blank" rel="noopener noreferrer" class="google-fab"
+    aria-label="Dejar reseña en Google">
+    <span class="google-fab-tooltip hidden">¡Dejanos tu reseña! ⭐⭐⭐⭐⭐</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+      <path fill="#EA4335"
+        d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" />
+      <path fill="#4285F4"
+        d="M46.5 24c0-1.61-.15-3.16-.42-4.69H24v9h12.75c-.55 2.88-2.18 5.32-4.63 6.96l7.18 5.57C43.5 36.33 46.5 30.82 46.5 24z" />
+      <path fill="#FBBC05"
+        d="M10.54 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.98-6.19z" />
+      <path fill="#34A853"
+        d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.18-5.57c-2.11 1.41-4.8 2.25-8.71 2.25-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" />
+    </svg>
   </a>
-</div>
 
-<script src="script.js" defer></script>
+  <!-- Instagram Floating Button -->
+  <a href="https://www.instagram.com/alpasso.colegiales" target="_blank" rel="noopener noreferrer" class="ig-fab"
+    aria-label="Seguinos en Instagram">
+    <span class="ig-fab-tooltip hidden">¡Seguinos para novedades! 📸</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path
+        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+    </svg>
+  </a>
+
+  <div class="footer">
+    <strong>AL PASSO</strong><br>
+    Colegiales · "Pasión que nos une"<br>
+    <a href="https://www.instagram.com/alpasso.colegiales" target="_blank" rel="noopener noreferrer" class="footer-ig">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <defs>
+          <linearGradient id="ig-grad-footer" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#fdf497" />
+            <stop offset="45%" style="stop-color:#fd5949" />
+            <stop offset="60%" style="stop-color:#d6249f" />
+            <stop offset="100%" style="stop-color:#285AEB" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+      </svg>
+      @alpasso.colegiales
+    </a>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
+
 </html>
